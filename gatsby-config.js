@@ -31,17 +31,17 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        fieldName: `craft`,
-        typeName: `Craft`,
-        url: `http://craft.test/api`,
-        headers: {
-          Authorization: `bearer ${process.env.CRAFTQL_API_KEY}`,
-        },
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-graphql',
+    //   options: {
+    //     fieldName: `craft`,
+    //     typeName: `Craft`,
+    //     url: `http://craft.test/api`,
+    //     headers: {
+    //       Authorization: `bearer ${process.env.CRAFTQL_API_KEY}`,
+    //     },
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
