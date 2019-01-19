@@ -1,6 +1,6 @@
 **NOTE: These instructions are installing this barebones starter from scratch.**
 
-Make sure you have PHP, Composer, Laravel Valet, mySQL, and gatsby-cli installed beforehand
+Make sure you have PHP, Composer, Laravel Valet, mySQL, and gatsby-cli installed beforehand.
 
 ### Downloads
 Head to the Valet [docs](https://laravel.com/docs/master/valet) for the first three (you need [Homebrew](https://brew.sh/) to get PHP). mySQL can be installed [here](https://dev.mysql.com/downloads/mysql/) and gatsby-cli is installed using npm `npm install -g gatsby-cli`
@@ -14,8 +14,9 @@ Head to the Valet [docs](https://laravel.com/docs/master/valet) for the first th
 ### Database
 * Start your mySQL if it isn’t already started
 * Create a database
-[ I recommend using TablePlus to connect to your new database and create your database]
-_I always keep mySQL databases encrypted on my own machine keep this in mind when connecting and entering your credentials_
+
+> I recommend using [TablePlus](https://tableplus.io/) to connect to your new database and create your database.I always keep mySQL databases encrypted on my own machine keep this in mind when connecting and entering your credentials_
+
 * Locate your .env file in craft and add your credentials and database name to the file
 
 ### Valet
@@ -60,7 +61,7 @@ _I always keep mySQL databases encrypted on my own machine keep this in mind whe
     </body>
 </html>
 ```
--> This is a very basic template, just to display the data you have currently in your CMS
+_This is a very basic template, just to display the data you have currently in your CMS_
 
 ### CraftQL
 * Make sure you are in the craft directory `cd craft`
