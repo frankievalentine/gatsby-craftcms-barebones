@@ -33,12 +33,12 @@ Head to the *[Valet docs](https://laravel.com/docs/master/valet)* for the first 
 
 ### Craft CMS
 * Settings <span>&#x27F6;</span> Create a new section called ‘Posts’
-* Settings <span>&#x27F6;</span> Fields <span>&#x27F6;</span> + New field
+* Settings <span>&#x27F6;</span> Fields <span>&#x27F6;</span> +New field
 	* Name: “post content”
 	* Handle is automatically generated
 	* Instructions “Place your content here”
 	* Field Type “Plan text”
-* Entries <span>&#x27F6;</span> + New entry
+* Entries <span>&#x27F6;</span> +New entry
 * Create two or three posts
 * Head back to your editor
 * Under craft/templates remove index.html

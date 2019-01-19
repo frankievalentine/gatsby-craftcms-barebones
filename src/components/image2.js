@@ -13,11 +13,11 @@ import Img from 'gatsby-image'
  * - `StaticQuery`: https://gatsby.app/staticquery
  */
 
-const Image = () => (
+const Image2 = () => (
   <StaticQuery
     query={graphql`
       query {
-        file(relativePath: { eq: "craftcms.jpg" }) {
+        file(relativePath: { eq: "gatsby-icon.png" }) {
           childImageSharp {
             fixed(width: 200) {
               ...GatsbyImageSharpFixed_noBase64
@@ -29,4 +29,4 @@ const Image = () => (
     render={data => <Img fixed={data.file.childImageSharp.fixed} />}
   />
 )
-export default Image
+export default Image2
