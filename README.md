@@ -32,13 +32,13 @@ Head to the *[Valet docs](https://laravel.com/docs/master/valet)* for the first 
 * Install Craft head to your browser at `craft.test/index.php?p=admin/install`
 
 ### Craft CMS
-* Settings -> Create a new section called ‘Posts’
-* Settings -> Fields -> + New field
+* Settings <span>&#x27F6;</span> Create a new section called ‘Posts’
+* Settings <span>&#x27F6;</span> Fields <span>&#x27F6;</span> + New field
 	* Name: “post content”
 	* Handle is automatically generated
 	* Instructions “Place your content here”
 	* Field Type “Plan text”
-* Entries -> + New entry
+* Entries <span>&#x27F6;</span> + New entry
 * Create two or three posts
 * Head back to your editor
 * Under craft/templates remove index.html
@@ -74,7 +74,7 @@ _This is a very basic template, just to display the data you have currently in y
 * Make sure you are in the craft directory `cd craft`
 * Install CraftQL using composer
 * `composer require markhuot/craftql:^1.0.0`
-* Settings -> Plugins -> CraftQL Settings -> Install -> Enable
+* Settings <span>&#x27F6;</span> Plugins <span>&#x27F6;</span> CraftQL Settings <span>&#x27F6;</span> Install <span>&#x27F6;</span> Enable
 * After it’s enabled head back to Settings
 * Enter CraftQL settings and scroll to the bottom
 * Click generate a new token (you can name it Gatsby if you want)
