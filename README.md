@@ -1,97 +1,118 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+**NOTE: These instructions are installing this barebones starter from scratch.**
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Make sure you have PHP, Composer, Laravel Valet, mySQL, and gatsby-cli installed beforehand
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Head to the Valet [docs](https://laravel.com/docs/master/valet) for the first three (you need [Homebrew](https://brew.sh/) to get PHP). mySQL can be installed [here](https://dev.mysql.com/downloads/mysql/) and gatsby-cli is installed using npm `npm install -g gatsby-cli`
 
-## 🚀 Quick start
+* Install a new Gatsby project first `gatsby new project-name`
+* cd into your project `cd project-name`
+* Install Craft `composer create-project craftcms/craft`
+* cd into Craft `cd craft`
 
-1.  **Create a Gatsby site.**
+_Database_
+* Start your mySQL if it isn’t already started
+* Create a database
+[ I recommend using TablePlus to connect to your new database and create your database]
+_I always keep mySQL databases encrypted on my own machine keep this in mind when connecting and entering your credentials_
+* Locate your .env file in craft and add your credentials and database name to the file
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+_Valet_
+* Start valet `valet start`
+* Link the CMS to valet `valet link`
+* Install Craft head to your browser at `craft.test/index.php?p=admin/install`
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    npx gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+_Craft CMS_
+* Settings -> Create a new section called ‘Posts’
+* Settings -> Fields -> + New field
+	* Name: “post content”
+	* Handle is automatically generated
+	* Instructions “Place your content here”
+	* Field Type “Plan text”
+* Entries -> + New entry
+* Create two or three posts
+* Head back to your editor
+* Under craft/templates remove index.html
+* Create a new file called `index.twig`
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog</title>
+    </head>
+    <body>
+        <div>
+            {% set entryQuery = craft.entries()
+                .section('posts') %}
 
-1.  **Start developing.**
+            {# Execute the query and get the results #}
+            {% set entries = entryQuery.all() %}
 
-    Navigate into your new site’s directory and start it up.
+            {# Display the entries #}
+            {% for entry in entries %}
+                <article>
+                    <h1>{{ entry.title }}</h1>
+                    <p>{{ entry.postContent }}</p>
+                </article>
+            {% endfor %}
+        </div>
+    </body>
+</html>
+```
+-> This is a very basic template, just to display the data you have currently in your CMS
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
+_CraftQL_
+* Make sure you are in the craft directory `cd craft`
+* Install CraftQL using composer
+* `composer require markhuot/craftql:^1.0.0`
+* Settings -> Plugins -> CraftQL Settings -> Install -> Enable
+* After it’s enabled head back to Settings
+* Enter CraftQL settings and scroll to the bottom
+* Click generate a new token (you can name it Gatsby if you want)
+* See Curl under Getting Started and run the command given
+* It should return: 
+```
+{"data":{"helloWorld":"Welcome to GraphQL! You now have a fully functional GraphQL endpoint."}}
+```
+* Click ‘Save’ at the top right
 
-1.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+_Gatsby_
+* Install gatsby-source-graphql plugin `npm i gatsby-source-graphql --save`
+* Add the source to `gatsby-config.js`
+```
+{
+  resolve: 'gatsby-source-graphql',
+  options: {
+    fieldName: `craft`,
+    typeName: `Craft`,
+    url: `http://craft.test/api`,
+    headers: {
+      Authorization:
+        `bearer ${process.env.CRAFTQL_API_KEY}`,
+    },
+  },
+},
+```
+* Require the ‘dotenv’ package at the top of your `gatsby-config.js` (it’s already a dependency of Gatsby so you don’t need to install it)
+```
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+```
+* Create your own `.env.development` file under root of the project
+* Add your generated CraftQL token to the file
+* See the .env.example file for the format
+* `gatsby develop` should start you up with a working GraphiQL connected to your Craft CMS backend
+* Try a query
+```
+ {
+  craft {
+    entries {
+      ...on Craft_Posts {
+        title
+        postContent
+      }
+    }
+  }
+}
+```
+* You should receive your Post data back
