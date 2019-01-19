@@ -1,0 +1,137 @@
+dateModified: 1547858791
+email:
+  fromEmail: sashab@aol.com
+  fromName: Craft
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  45e30176-7b1a-425f-857c-e4e9cee863e0:
+    name: Common
+fields:
+  2e8db033-d800-46de-bdd8-f56f99add0d6:
+    contentColumnType: string
+    fieldGroup: 45e30176-7b1a-425f-857c-e4e9cee863e0
+    handle: postAuthor
+    instructions: 'Who wrote this post?'
+    name: 'post author'
+    searchable: true
+    settings:
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Users
+  8dc9ba7d-58c8-43f8-8b00-676d2e72af70:
+    contentColumnType: datetime
+    fieldGroup: 45e30176-7b1a-425f-857c-e4e9cee863e0
+    handle: dateOfPost
+    instructions: 'Day of your post'
+    name: 'date of post'
+    searchable: true
+    settings:
+      minuteIncrement: '30'
+      showDate: true
+      showTime: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  a8d9c44e-779f-4e5e-aa76-8d20d87306c4:
+    contentColumnType: text
+    fieldGroup: 45e30176-7b1a-425f-857c-e4e9cee863e0
+    handle: postContent
+    instructions: 'Place your content here'
+    name: 'post content'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+plugins:
+  craftql:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.1.0
+    settings:
+      allowedHeaders:
+        - 'Authorization, Content-Type'
+      graphiqlFetchUrl: null
+      maxQueryComplexity: false
+      maxQueryDepth: false
+      uri: api
+      verbs:
+        - POST
+sections:
+  fe55d3a2-a081-41f4-9917-69a25ee41499:
+    enableVersioning: true
+    entryTypes:
+      ff91c761-a624-4188-9c56-1f517661eeb9:
+        fieldLayouts:
+          237ec80c-6423-45db-89b1-353bfb004615:
+            tabs:
+              -
+                fields:
+                  2e8db033-d800-46de-bdd8-f56f99add0d6:
+                    required: false
+                    sortOrder: 4
+                  80658bbf-47ea-4cba-95c6-64994e777bca:
+                    required: false
+                    sortOrder: 1
+                  8dc9ba7d-58c8-43f8-8b00-676d2e72af70:
+                    required: false
+                    sortOrder: 2
+                  a8d9c44e-779f-4e5e-aa76-8d20d87306c4:
+                    required: false
+                    sortOrder: 3
+                name: Common
+                sortOrder: 1
+        handle: posts
+        hasTitleField: true
+        name: Posts
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: posts
+    name: Posts
+    propagateEntries: true
+    siteSettings:
+      700e3318-940a-44d8-888a-2261f85c5b96:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: 'posts/{slug}'
+    type: channel
+siteGroups:
+  f0d78919-a3a8-45ec-aec1-740e8b33555a:
+    name: Craft
+sites:
+  700e3318-940a-44d8-888a-2261f85c5b96:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: Craft
+    primary: true
+    siteGroup: f0d78919-a3a8-45ec-aec1-740e8b33555a
+    sortOrder: 1
+system:
+  edition: solo
+  live: true
+  name: Craft
+  schemaVersion: 3.1.20
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

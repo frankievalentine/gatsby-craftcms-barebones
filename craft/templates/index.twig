@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog</title>
+    </head>
+    <body>
+        <div>
+            {% set entryQuery = craft.entries()
+                .section('posts') %}
+
+            {# Execute the query and get the results #}
+            {% set entries = entryQuery.all() %}
+
+            {# Display the entries #}
+            {% for entry in entries %}
+                <article>
+                    <h1>{{ entry.title }}</h1>
+                    <p>{{ entry.postContent }}</p>
+                </article>
+            {% endfor %}
+        </div>
+    </body>
+</html>
