@@ -1,9 +1,18 @@
 **NOTE: These instructions are installing this barebones starter from scratch.**
 
-Make sure you have PHP, Composer, Laravel Valet, mySQL, and gatsby-cli installed beforehand.
+[craft](https://pbs.twimg.com/profile_images/890640990184329216/ds8IotBg_400x400.jpg)[gatsby](https://pbs.twimg.com/profile_images/875556871427375106/Xuq8DypK_400x400.jpg)
+
+![](craft) + ! [](gatsby)
+
+---
 
 ### Downloads
+
+Make sure you have PHP, Composer, Laravel Valet, mySQL, and gatsby-cli installed beforehand.
+
 Head to the Valet [docs](https://laravel.com/docs/master/valet) for the first three (you need [Homebrew](https://brew.sh/) to get PHP). mySQL can be installed [here](https://dev.mysql.com/downloads/mysql/) and gatsby-cli is installed using npm `npm install -g gatsby-cli`
+
+---
 
 ### Intro
 * Install a new Gatsby project first `gatsby new project-name`
