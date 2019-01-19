@@ -1,6 +1,7 @@
 **NOTE: These instructions are installing this barebones starter from scratch.**
 
-![](https://pbs.twimg.com/profile_images/890640990184329216/ds8IotBg_400x400.jpg) ![](https://pbs.twimg.com/profile_images/875556871427375106/Xuq8DypK_400x400.jpg)
+<img src="https://pbs.twimg.com/profile_images/890640990184329216/ds8IotBg_400x400.jpg" alt="drawing" width="200"/>
+<img src="https://pbs.twimg.com/profile_images/875556871427375106/Xuq8DypK_400x400.jpg" alt="drawing" width="200"/>
 
 ---
 
@@ -8,7 +9,7 @@
 
 Make sure you have PHP, Composer, Laravel Valet, mySQL, and gatsby-cli installed beforehand.
 
-Head to the Valet [docs](https://laravel.com/docs/master/valet) for the first three (you need [Homebrew](https://brew.sh/) to get PHP). mySQL can be installed [here](https://dev.mysql.com/downloads/mysql/) and gatsby-cli is installed using npm `npm install -g gatsby-cli`
+Head to the *[Valet docs](https://laravel.com/docs/master/valet)* for the first three (you need *[Homebrew](https://brew.sh/)* to get PHP). mySQL can be installed *[here](https://dev.mysql.com/downloads/mysql/)* and gatsby-cli is installed using npm `npm install -g gatsby-cli`.
 
 ---
 
@@ -22,7 +23,7 @@ Head to the Valet [docs](https://laravel.com/docs/master/valet) for the first th
 * Start your mySQL if it isn’t already started
 * Create a database
 
-> I recommend using [TablePlus](https://tableplus.io/) to connect to your new database and create your database.I always keep mySQL databases encrypted on my own machine keep this in mind when connecting and entering your credentials_
+> I recommend using *[TablePlus](https://tableplus.io/)* to connect to your new database and create your database.I always keep mySQL databases encrypted on my own machine keep this in mind when connecting and entering your credentials
 
 * Locate your .env file in craft and add your credentials and database name to the file
 
