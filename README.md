@@ -1,8 +1,6 @@
 **NOTE: These instructions are installing this barebones starter from scratch.**
 
-[craft](https://pbs.twimg.com/profile_images/890640990184329216/ds8IotBg_400x400.jpg)[gatsby](https://pbs.twimg.com/profile_images/875556871427375106/Xuq8DypK_400x400.jpg)
-
-![](craft) + ! [](gatsby)
+![](https://pbs.twimg.com/profile_images/890640990184329216/ds8IotBg_400x400.jpg) + ![](https://pbs.twimg.com/profile_images/875556871427375106/Xuq8DypK_400x400.jpg)
 
 ---
 
