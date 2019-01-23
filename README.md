@@ -19,17 +19,18 @@ Head to the *[Valet docs](https://laravel.com/docs/master/valet)* for the first 
 * cd into Craft `cd craft`
 
 ### Database
-* Start your mySQL if it isn’t already started
+* Start your mySQL database if it isn’t already started
 * Create a database
 
-> I recommend using *[TablePlus](https://tableplus.io/)* to connect to your new database and create your database.I always keep mySQL databases encrypted on my own machine keep this in mind when connecting and entering your credentials
+> I recommend using *[TablePlus](https://tableplus.io/)* to connect to your new database and create your database. I always keep mySQL databases encrypted on my own machine keep this in mind when connecting and entering your credentials
 
 * Locate your .env file in craft and add your credentials and database name to the file
 
 ### Valet
-* Start valet `valet start`
-* Link the CMS to valet `valet link`
-* Install Craft head to your browser at `craft.test/index.php?p=admin/install`
+* While still in the `/craft` directory
+* Start valet using `valet start`
+* Then link the directory to valet using `valet link`
+* Install Craft - head to your browser at `craft.test/index.php?p=admin/install`
 
 ### Craft CMS
 * Settings <span>&#x27F6;</span> Create a new section called ‘Posts’
@@ -37,7 +38,7 @@ Head to the *[Valet docs](https://laravel.com/docs/master/valet)* for the first 
 	* Name: “post content”
 	* Handle is automatically generated
 	* Instructions “Place your content here”
-	* Field Type “Plan text”
+	* Field Type “Plain text”
 * Entries <span>&#x27F6;</span> +New entry
 * Create two or three posts
 * Head back to your editor
