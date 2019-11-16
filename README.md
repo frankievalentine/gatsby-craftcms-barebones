@@ -1,7 +1,5 @@
 **NOTE: These instructions are installing this barebones starter from scratch.**
 
-<img src="https://pbs.twimg.com/profile_images/890640990184329216/ds8IotBg_400x400.jpg" alt="Craft CMS Logo" width="200"/><img src="https://pbs.twimg.com/profile_images/875556871427375106/Xuq8DypK_400x400.jpg" alt="Gatsby Logo" width="200"/>
-
 ---
 
 ### Downloads
