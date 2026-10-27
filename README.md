@@ -1,3 +1,10 @@
+> [!WARNING]
+> **This repository is archived and no longer maintained.**
+>
+> It targets Gatsby 2, React 16, and the CraftQL plugin, all of which are outdated. CraftQL is no longer needed: Craft CMS has shipped a native GraphQL API since 3.3, so the CraftQL steps below no longer apply. Dependencies have known vulnerabilities and are not being updated.
+>
+> For a current headless Craft setup, start from the [Craft GraphQL docs](https://craftcms.com/docs/5.x/development/graphql.html) and the front-end framework of your choice.
+
 **NOTE: These instructions are installing this barebones starter from scratch.**
 
 ---
